@@ -1,0 +1,34 @@
+create e report file first
+then, use cmd
+https://reqres.in/
+https://fakestoreapi.com/
+https://www.youtube.com/watch?v=m4bxF756ZGw
+
+jmeter -n -t FakestoreAPI_T300.jmx -l report\FakestoreAPI_T300.jtl
+
+jmeter -g report\FakestoreAPI_T300.jtl -o report\FakestoreAPI_T300.html
+
+jmeter -n -t FakestoreAPI.jmx -l report\FakestoreAPI.jtl
+jmeter -g report\FakestoreAPI.jtl -o report\FakestoreAPI.html
+
+
+
+
+How to extract data for reporting in jmeter
+============================================
+Dear, 
+
+I’ve completed performance test on frequently used API for test App. 
+Test executed for the below mentioned scenario in server 000.000.000.00. 
+
+200 Concurrent Request with 10 Loop Count; Avg TPS for Total Samples is ~ 234 And Total Concurrent API requested: 1400.
+300 Concurrent Request with 10 Loop Count; Avg TPS for Total Samples is ~ 350 And Total Concurrent API requested: 2100.
+400 Concurrent Request with 10 Loop Count; Avg TPS for Total Samples is ~ 424 And Total Concurrent API requested: 2800.
+500 Concurrent Request with 10 Loop Count; Avg TPS for Total Samples is ~ 443 And Total Concurrent API requested: 3500.
+
+While executed 500 concurrent request, found  82 request got connection timeout and error rate is 0.23%. 
+
+Summary: Server can handle almost concurrent 3200 API call with almost zero (0) error rate.
+
+Please find the details report from the attachment and  let me know if you have any further queries. 
+

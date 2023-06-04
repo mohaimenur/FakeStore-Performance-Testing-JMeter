@@ -1,0 +1,17 @@
+jmeter -n -t FakestoreAPI.jmx -l report\FakestoreAPI.jtl
+jmeter -g report\FakestoreAPI.jtl -o report\FakestoreAPI.html
+
+Dear, 
+
+I’ve completed a performance test on frequently used API for FakeStoreAPI(https://fakestoreapi.com/). 
+Test executed for the below mentioned scenario in server 000.000.000.00. 
+
+100 Concurrent Requests with 10 Loop Count; Avg TPS for Total Samples is ~ 105 And Total Concurrent API requested: 29000.
+200 Concurrent Requests with 10 Loop Count; Avg TPS for Total Samples is ~ 103 And Total Concurrent API requested: 58000.
+300 Concurrent Requests with 10 Loop Count; Avg TPS for Total Samples is ~ 112 And Total Concurrent API requested: 87000.
+
+While executed 300 concurrent requests, found  9 requests got connection timeout and error rate is 0.01%. 
+
+Summary: Server can handle almost concurrent 85000 API call with almost zero (0) error rate.
+
+Please find the details report from the attachment and let me know if you have any further queries. 
